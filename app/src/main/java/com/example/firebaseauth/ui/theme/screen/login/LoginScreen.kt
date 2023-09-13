@@ -31,6 +31,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.firebaseauth.data.AuthViewModel
+import com.example.firebaseauth.navigation.ROUTE_HOME
 import com.example.firebaseauth.navigation.ROUTE_REGISTER
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -71,6 +72,7 @@ fun LoginScreen(navController :NavHostController) {
         Button(onClick = {
                          var mylogin=AuthViewModel(navController, context)
             mylogin.login(email.text.trim(), pass.text.trim())
+            navController.navigate(ROUTE_HOME)
 
         }, modifier = Modifier.fillMaxWidth()) {
             Text(text = "Log In")

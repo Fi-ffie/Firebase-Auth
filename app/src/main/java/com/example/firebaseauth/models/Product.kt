@@ -12,4 +12,5 @@ class Product {
         this.price=price
         this.id=id
     }
+    constructor()
 }

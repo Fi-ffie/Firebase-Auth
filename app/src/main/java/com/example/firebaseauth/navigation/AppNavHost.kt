@@ -19,7 +19,7 @@ import com.example.firebaseauth.ui.theme.screen.register.RegisterScreen
 
 @Composable
 fun AppNavHost(modifier: Modifier=Modifier,navController:NavHostController= rememberNavController(),
-               startDestination:String= ROUTE_HOME) {
+               startDestination:String= ROUTE_LOGIN) {
     NavHost(navController = navController, modifier=modifier, startDestination = startDestination){
         composable(ROUTE_LOGIN){
             LoginScreen(navController)
